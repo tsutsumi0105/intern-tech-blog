@@ -8,6 +8,12 @@ const inter = Inter({
   display: "swap",
 });
 
+export const metadata = {
+  title: "テックブログ",
+  description:
+    "「エンジニアの学習記録を、社外にも発信できるテックブログ」インターン中に学んだことや、技術Tips、つまずいたポイントの解決方法など、実際の学習・開発の中で得た知見を記事にして発信していきます。",
+};
+
 export default function RootLayout({
   children,
 }: {
