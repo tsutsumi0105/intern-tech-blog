@@ -10,7 +10,7 @@ export default function Header() {
   const isBlog = pathname === "/blog";
 
   return (
-    <header className="bg-white/80 border-b border-[rgba(229,231,235,0.5)] flex items-center px-4 py-3 drop-shadow sm:px-28 sm:py-5">
+    <header className="bg-surface/80 border-b border-border-light flex items-center px-4 py-3 drop-shadow sm:px-28 sm:py-5">
       <div className="flex items-center w-full">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -20,14 +20,14 @@ export default function Header() {
             height={48}
             className="drop-shadow-md"
           />
-          <span className="font-bold text-2xl text-[#101828]">TechBlog</span>
+          <span className="font-bold text-2xl text-text-main">TechBlog</span>
         </Link>
 
         <nav className="ml-auto flex items-center gap-2 sm:gap-4">
           <Link
             href="/"
-            className={`flex items-center gap-2 font-medium text-[16px] px-4 py-2 rounded-full
-              ${isHome ? "bg-[#EFF6FF] text-[#155DFC]" : "text-[#364153]"}`}
+            className={`flex items-center gap-2 font-medium text-[16px] px-4 py-2 rounded-full transition-colors
+              ${isHome ? "bg-primary-light text-primary" : "text-text-sub"}`}
           >
             <Image
               src={isHome ? "/images/home_blue.svg" : "/images/home.svg"}
@@ -35,19 +35,13 @@ export default function Header() {
               width={16}
               height={16}
             />
-            <span
-              className={`hidden sm:inline ${
-                isHome ? "text-[#155DFC]" : "text-[#364153]"
-              }`}
-            >
-              ホーム
-            </span>
+            <span className={`hidden sm:inline`}>ホーム</span>
           </Link>
 
           <Link
             href="/blog"
-            className={`flex items-center gap-2 font-medium text-[16px] px-4 py-2 rounded-full
-              ${isBlog ? "bg-[#EFF6FF] text-[#155DFC]" : "text-[#364153]"}`}
+            className={`flex items-center gap-2 font-medium text-[16px] px-4 py-2 rounded-full transition-colors
+              ${isBlog ? "bg-primary-light text-primary" : "text-text-sub"}`}
           >
             <Image
               src={isBlog ? "/images/doc_blue.svg" : "/images/doc.svg"}
@@ -55,13 +49,7 @@ export default function Header() {
               width={16}
               height={16}
             />
-            <span
-              className={`hidden sm:inline ${
-                isBlog ? "text-[#155DFC]" : "text-[#364153]"
-              }`}
-            >
-              記事一覧
-            </span>
+            <span className="hidden sm:inline">記事一覧</span>
           </Link>
         </nav>
       </div>
