@@ -19,11 +19,11 @@ export default async function Home() {
     const tags = tagRes.contents;
 
     return (
-      <main>
+      <>
         <HeroSection />
         <CategoriesSection tags={tags} />
         <LatestArticlesSection blogs={blogs} />
-      </main>
+      </>
     );
   } catch {
     throw Error;
