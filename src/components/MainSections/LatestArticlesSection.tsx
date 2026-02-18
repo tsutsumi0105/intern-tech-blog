@@ -28,7 +28,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
             href="/blog"
             className="hidden sm:flex ml-auto mt-auto items-center justify-center gap-2 bg-primary rounded-full font-medium w-38.5 h-12 shadow-lg"
           >
-            <span className="text-white text-[16px] font-semibold">
+            <span className="text-white text-base font-semibold">
               すべて見る
             </span>
             <Image src="/images/arrow.svg" alt="矢印" width={20} height={20} />
@@ -60,7 +60,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
                   {blog.tags.map((tag) => (
                     <span
                       key={tag.id}
-                      className="text-[12px] font-semibold px-2 py-1 text-primary"
+                      className="text-xs font-semibold px-2 py-1 text-primary"
                     >
                       {tag.name}
                     </span>
@@ -76,7 +76,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
                     width={16}
                     height={16}
                   />
-                  <span className="text-xs text-[#6a7282] text-[14px] mt-auto">
+                  <span className="text-xs text-[#6a7282] text-sm mt-auto">
                     {format(new Date(blog.publishedAt), "yyyy年M月d日", {
                       locale: ja,
                     })}
@@ -85,9 +85,9 @@ export default function LatestArticlesSection({ blogs }: Props) {
                 <h3 className="font-semibold text-2xl text-[#101828] line-clamp-2">
                   {blog.title}
                 </h3>
-                <p className="text-[14px] text-[#4A5565]">{blog.description}</p>
+                <p className="text-sm text-[#4A5565]">{blog.description}</p>
                 <div className="flex gap-2">
-                  <span className="text-[14px] text-primary">記事を読む</span>
+                  <span className="text-sm text-primary">記事を読む</span>
                   <Image
                     src="/images/blue-arrow.svg"
                     alt="矢印"
@@ -103,7 +103,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
           href="/blog"
           className="flex mx-auto justify-center gap-2 bg-primary border border-primary-border px-8 py-4.5 rounded-full font-medium w-80 shadow-lg sm:hidden"
         >
-          <span className="text-[#FFFFFF] text-[16px] font-semibold">
+          <span className="text-[#FFFFFF] text-base font-semibold">
             すべて見る
           </span>
           <Image src="/images/arrow.svg" alt="矢印" width={20} height={20} />

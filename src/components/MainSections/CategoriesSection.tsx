@@ -22,7 +22,7 @@ export default function CategoriesSection({ tags }: Props) {
           >
             カテゴリから探す
           </h2>
-          <p className="text-[18px] text-[#4A5565]">
+          <p className="text-lg text-[#4A5565]">
             興味のある技術分野の記事を見つけよう
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function CategoriesSection({ tags }: Props) {
                   {tag.description}
                 </p>
                 <div className="flex gap-2">
-                  <span className="text-[14px] text-primary">記事を見る</span>
+                  <span className="text-sm text-primary">記事を見る</span>
                   <Image
                     src="/images/blue-arrow.svg"
                     alt="矢印"

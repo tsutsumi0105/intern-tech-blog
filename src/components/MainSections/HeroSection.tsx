@@ -11,7 +11,7 @@ export default function HeroSection() {
                 rounded-full px-4 py-2"
         >
           <Image src="/images/star.svg" alt="キラキラ" width={16} height={16} />
-          <p className="text-white/90 text-[14px]">学びを共有する場所</p>
+          <p className="text-white/90 text-sm">学びを共有する場所</p>
         </div>
 
         <h1 className="text-5xl sm:text-7xl font-bold flex flex-col gap-2">
@@ -19,7 +19,7 @@ export default function HeroSection() {
           <span>学習記録</span>
         </h1>
 
-        <p className="text-primary-soft text-[20px]">
+        <p className="text-primary-soft text-xl">
           インターン生と社員が日々学んだ技術や
           <br />
           気づきを発信する
@@ -33,7 +33,7 @@ export default function HeroSection() {
             className="flex gap-2 items-center bg-white text-primary px-8 py-4.5 rounded-full  font-medium shadow-lg"
           >
             <Image src="/images/book.svg" alt="本" width={20} height={20} />
-            <span className="text-[16px] font-semibold">記事を読む</span>
+            <span className="text-base font-semibold">記事を読む</span>
             <Image
               src="/images/blue-arrow.svg"
               alt="矢印"
@@ -52,7 +52,7 @@ export default function HeroSection() {
               width={20}
               height={20}
             />
-            <span className="text-[16px] font-semibold">カテゴリから探す</span>
+            <span className="text-base font-semibold">カテゴリから探す</span>
           </Link>
         </div>
       </div>
