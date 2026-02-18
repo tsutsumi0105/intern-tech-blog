@@ -62,7 +62,7 @@ const navItems = [
           />
           <path
             d="M6.66597 5.99942H5.33276"
-            stroke="#364153"
+            stroke="currentColor"
             stroke-width="1.3332"
             stroke-linecap="round"
             stroke-linejoin="round"
