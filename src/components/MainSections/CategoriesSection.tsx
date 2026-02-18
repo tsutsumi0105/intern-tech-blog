@@ -22,7 +22,7 @@ export default function CategoriesSection({ tags }: Props) {
           >
             カテゴリから探す
           </h2>
-          <p className="text-lg text-[#4A5565]">
+          <p className="text-lg text-text-secondary">
             興味のある技術分野の記事を見つけよう
           </p>
         </div>

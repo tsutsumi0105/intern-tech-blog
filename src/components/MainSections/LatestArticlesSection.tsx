@@ -76,7 +76,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
                     width={16}
                     height={16}
                   />
-                  <span className="text-xs text-[#6a7282] text-sm mt-auto">
+                  <span className="text-text-tertiary text-sm mt-auto">
                     {format(new Date(blog.publishedAt), "yyyy年M月d日", {
                       locale: ja,
                     })}
@@ -85,7 +85,9 @@ export default function LatestArticlesSection({ blogs }: Props) {
                 <h3 className="font-semibold text-2xl text-[#101828] line-clamp-2">
                   {blog.title}
                 </h3>
-                <p className="text-sm text-[#4A5565]">{blog.description}</p>
+                <p className="text-sm text-text-secondary">
+                  {blog.description}
+                </p>
                 <div className="flex gap-2">
                   <span className="text-sm text-primary">記事を読む</span>
                   <Image

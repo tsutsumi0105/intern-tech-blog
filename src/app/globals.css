@@ -8,10 +8,10 @@
   --color-primary-soft: #dbeafe;
   --color-text-main: #101828;
   --color-text-sub: #364153;
-
   --color-text-muted: #667085;
   --color-text-light: #98a2b3;
-
+  --color-text-secondary: #4a5565;
+  --color-text-tertiary: #6a7282;
   --color-border-light: rgba(229, 231, 235, 0.5);
   --color-surface: #ffffff;
   --color-surface-dark: #101828;
