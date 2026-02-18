@@ -71,7 +71,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
               <div className="flex flex-col p-6 gap-4">
                 <div className="flex gap-2">
                   <Image
-                    src="/images/calender.svg"
+                    src="/images/calendar.svg"
                     alt="カレンダー"
                     width={16}
                     height={16}

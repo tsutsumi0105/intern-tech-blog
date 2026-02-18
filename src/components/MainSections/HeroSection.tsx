@@ -47,7 +47,7 @@ export default function HeroSection() {
             className="flex gap-2 bg-primary-dark border border-primary-border px-8 py-4.5 rounded-full font-medium"
           >
             <Image
-              src="/images/flagment.svg"
+              src="/images/fragment.svg"
               alt="フラグメント"
               width={20}
               height={20}
