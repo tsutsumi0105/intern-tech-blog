@@ -44,7 +44,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
               {/* 画像 */}
               <div className="h-50 relative">
                 <Image
-                  src={blog.eyecatch?.url || "/images/noimage.svg"}
+                  src={blog.eyecatch.url}
                   alt={blog.title}
                   fill
                   className="object-cover"

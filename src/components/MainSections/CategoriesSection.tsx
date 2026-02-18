@@ -35,7 +35,7 @@ export default function CategoriesSection({ tags }: Props) {
             >
               <div className="h-48 relative overflow-hidden rounded-t-xl">
                 <Image
-                  src={tag.thumbnail?.url || "/images/noimage.svg"}
+                  src={tag.thumbnail.url}
                   alt={tag.name}
                   fill
                   className="object-cover"
