@@ -4,14 +4,15 @@ export type Tag = {
   id: string;
   name: string;
   slug: string;
-  description: string;
+  description?: string;
   thumbnail: MicroCMSImage;
 };
 
 export type Blog = {
   id: string;
   title: string;
-  description: string;
+  description?: string;
+  content: string;
   eyecatch: MicroCMSImage;
   tags: {
     id: string;
