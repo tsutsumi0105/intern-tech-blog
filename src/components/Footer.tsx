@@ -12,13 +12,13 @@ export default function Footer() {
             height={48}
           />
           <div className="flex flex-col">
-            <span className="text-surface text-[20px] font-bold">TechBlog</span>
-            <span className="text-text-muted text-[14px] font-normal">
+            <span className="text-surface text-xl font-bold">TechBlog</span>
+            <span className="text-text-muted text-sm font-normal">
               Learn, Share, Grow
             </span>
           </div>
         </div>
-        <p className="text-text-soft text-[14px] font-normal">
+        <p className="text-text-soft text-sm font-normal">
           © 2026 TechBlog. All rights reserved.
         </p>
       </div>
