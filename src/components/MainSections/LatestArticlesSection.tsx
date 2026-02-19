@@ -82,7 +82,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
                     })}
                   </span>
                 </div>
-                <h3 className="font-semibold text-2xl text-[#101828] line-clamp-2">
+                <h3 className="font-semibold text-2xl text-text-main line-clamp-2">
                   {blog.title}
                 </h3>
                 <p className="text-sm text-text-secondary">
@@ -105,9 +105,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
           href="/blog"
           className="flex mx-auto justify-center gap-2 bg-primary border border-primary-border px-8 py-4.5 rounded-full font-medium w-80 shadow-lg sm:hidden"
         >
-          <span className="text-[#FFFFFF] text-base font-semibold">
-            すべて見る
-          </span>
+          <span className="text-white text-base font-semibold">すべて見る</span>
           <Image src="/images/arrow.svg" alt="矢印" width={20} height={20} />
         </Link>
       </div>
