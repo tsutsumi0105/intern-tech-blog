@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Tag } from "@/app/types/microcms";
+import type { Tag } from "@/types/microcms";
 
 type Props = {
   tags: Tag[];

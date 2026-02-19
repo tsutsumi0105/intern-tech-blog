@@ -2,7 +2,7 @@ import { client } from "@/lib/microcms";
 import HeroSection from "@/components/MainSections/HeroSection";
 import CategoriesSection from "@/components/MainSections/CategoriesSection";
 import LatestArticlesSection from "@/components/MainSections/LatestArticlesSection";
-import type { Blog, Tag } from "./types/microcms";
+import type { Blog, Tag } from "../types/microcms";
 
 export default async function Home() {
   try {

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
-import type { Blog } from "@/app/types/microcms";
+import type { Blog } from "@/types/microcms";
 
 type Props = {
   blogs: Blog[];
