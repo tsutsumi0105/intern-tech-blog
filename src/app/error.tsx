@@ -17,7 +17,7 @@ export default function Error({
     <div className="flex flex-col items-center justify-center min-h-screen gap-6">
       <Image
         src="/images/error.svg"
-        alt="TechBlogロゴ"
+        alt="エラーアイコン"
         width={60}
         height={60}
       />
