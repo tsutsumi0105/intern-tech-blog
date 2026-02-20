@@ -15,7 +15,6 @@ export default async function CategoryPage(props: {
   const params = await props.params;
   const slug = params.slug;
 
-  // タグデータを持って来ている
   const tagData = await client.get({
     endpoint: "tag",
     queries: {
@@ -63,25 +62,23 @@ export default async function CategoryPage(props: {
             />
           </div>
           <div className="flex flex-col gap-6">
-            <div className="inline-flex self-start justify-center items-center gap-2 h-9 bg-[#155DFC] text-white rounded-full font-semibold px-4 py-2 shadow-md">
+            <div className="inline-flex self-start justify-center items-center gap-2 h-9 bg-primary text-white rounded-full font-semibold px-4 py-2 shadow-md">
               <TagIcon width={16} height={16} />
               <p className="text-white">カテゴリ</p>
             </div>
             <h1 className="text-5xl font-bold">{tag.name}</h1>
-            <p className="text-[18px] sm:text-[20px] text-[#4A5565] font-normal">
+            <p className="text-lg sm:text-xl text-text-secondary font-normal">
               {tag.description}
             </p>
-            <div className="inline-flex self-start place-items-center gap-2 h-9 bg-white rounded-full font-semibold px-5 py-3 shadow-md border border-[#E5E7EB]">
-              <span className="w-2 h-2 bg-[#155DFC] rounded-full"></span>
-              <p className="text-text-sub text-[14px]">
-                {blogs.length}件の記事
-              </p>
+            <div className="inline-flex self-start place-items-center gap-2 h-9 bg-white rounded-full font-semibold px-5 py-3 shadow-md border border-border">
+              <span className="w-2 h-2 bg-primary rounded-full"></span>
+              <p className="text-text-sub text-sm">{blogs.length}件の記事</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" bg-[#f9fafb] ">
+      <div className="bg-surface-muted">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-13 sm:pt-16 px-4 sm:px-8 pb-50 max-w-6xl mx-auto">
           {blogs.map((blog: Blog) => (
             <Link
@@ -117,7 +114,7 @@ export default async function CategoryPage(props: {
               </div>
               {/* 本文 */}
               <div className="flex flex-col p-6 gap-4">
-                <div className="flex gap-2">
+                <div className="flex gap-2 place-items-center">
                   <CalendarIcon width={16} height={16} />
                   <span className="text-text-tertiary text-sm mt-auto">
                     {format(new Date(blog.publishedAt), "yyyy年M月d日", {
