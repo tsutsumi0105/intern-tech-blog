@@ -21,9 +21,7 @@ export default function Error({
         width={60}
         height={60}
       />
-      <h2 className="text-3xl text-primary">
-        {error.message && "予期せぬエラーが発生しました"}
-      </h2>
+      <h2 className="text-3xl text-primary">予期せぬエラーが発生しました</h2>
       <button
         onClick={reset}
         className="px-4 py-2 bg-primary text-white rounded-lg hover:cursor-pointer hover:shadow-lg"
