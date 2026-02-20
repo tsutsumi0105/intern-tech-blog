@@ -3,6 +3,7 @@ import Image from "next/image";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 import type { Blog } from "@/types/microcms";
+import CalendarIcon from "../icons/CalendarIcon";
 
 type Props = {
   blogs: Blog[];
@@ -57,25 +58,20 @@ export default function LatestArticlesSection({ blogs }: Props) {
                     width={12}
                     height={12}
                   />
-                  {blog.tags.map((tag) => (
-                    <span
-                      key={tag.id}
-                      className="text-xs font-semibold px-2 py-1 text-primary"
-                    >
-                      {tag.name}
+                  <span className="text-xs font-semibold px-2 py-1 text-primary">
+                    {blog.tags[0].name}
+                  </span>
+                  {blog.tags.length > 1 && (
+                    <span className="text-xs font-semibold px-2 py-1 text-primary">
+                      ...
                     </span>
-                  ))}
+                  )}
                 </div>
               </div>
               {/* 本文 */}
               <div className="flex flex-col p-6 gap-4">
                 <div className="flex gap-2">
-                  <Image
-                    src="/images/calendar.svg"
-                    alt="カレンダー"
-                    width={16}
-                    height={16}
-                  />
+                  <CalendarIcon width={16} height={16} />
                   <span className="text-text-tertiary text-sm mt-auto">
                     {format(new Date(blog.publishedAt), "yyyy年M月d日", {
                       locale: ja,

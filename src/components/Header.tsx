@@ -10,7 +10,7 @@ const navItems = [
   {
     label: "ホーム",
     href: "/",
-    icon: <HomeIcon />,
+    icon: <HomeIcon width={16} height={16} />,
   },
 
   {
