@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 import type { Blog } from "@/types/microcms";
 import ArrowIcon from "../Icons/ArrowIcon";
-import CalendarIcon from "../Icons/CalenderIcon";
+import CalendarIcon from "../Icons/CalendarIcon";
 import TagIcon from "../Icons/TagIcon";
 
 type Props = {
