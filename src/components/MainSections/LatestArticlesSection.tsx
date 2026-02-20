@@ -29,14 +29,10 @@ export default function LatestArticlesSection({ blogs }: Props) {
           </div>
           <Link
             href="/blog"
-            className="hidden sm:flex ml-auto mt-auto items-center justify-center gap-2 bg-primary rounded-full font-medium w-38.5 h-12 shadow-lg"
+            className="hidden sm:flex ml-auto mt-auto items-center justify-center gap-2 bg-primary rounded-full w-38.5 h-12 shadow-lg place-items-center text-white font-semibold text-base"
           >
-            <div className="flex gap-2 place-items-center text-white font-semibold">
-              <span className="text-white text-base font-semibold">
-                すべて見る
-              </span>
-              <ArrowIcon width={20} height={20} />
-            </div>
+            <span>すべて見る</span>
+            <ArrowIcon width={20} height={20} />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -93,12 +89,10 @@ export default function LatestArticlesSection({ blogs }: Props) {
         </div>
         <Link
           href="/blog"
-          className="flex mx-auto justify-center gap-2 bg-primary border border-primary-border px-8 py-4.5 rounded-full font-medium w-80 shadow-lg sm:hidden"
+          className="flex mx-auto justify-center items-center gap-2 bg-primary border border-primary-border px-8 py-4.5 rounded-full w-80 shadow-lg sm:hidden text-white font-semibold text-base"
         >
-          <div className="flex gap-2 place-items-center text-white font-semibold">
-            <span className="text-base">すべて見る</span>
-            <ArrowIcon width={20} height={20} />
-          </div>
+          <span>すべて見る</span>
+          <ArrowIcon width={20} height={20} />
         </Link>
       </div>
     </section>
