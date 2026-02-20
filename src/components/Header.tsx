@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import HomeIcon from "./Icons/HomeIcon";
 import DocIcon from "./Icons/DocIcon";
-import ArrowIcon from "./Icons/ArrowIcon";
 
 const navItems = [
   {
