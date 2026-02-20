@@ -10,13 +10,13 @@ const navItems = [
   {
     label: "ホーム",
     href: "/",
-    icon: <HomeIcon />,
+    icon: <HomeIcon width={16} height={16} />,
   },
 
   {
     label: "記事一覧",
     href: "/blog",
-    icon: <DocIcon />,
+    icon: <DocIcon width={16} height={16} />,
   },
 ];
 
