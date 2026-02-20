@@ -2,12 +2,12 @@ import { client } from "@/lib/microcms";
 import Image from "next/image";
 import Link from "next/link";
 import type { Blog } from "@/types/microcms";
-import TagIcon from "@/components/icons/TagIcon";
+import TagIcon from "@/components/Icons/TagIcon";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
-import HomeIcon from "@/components/icons/HomeIcon";
-import CalendarIcon from "@/components/icons/CalendarIcon";
+import HomeIcon from "@/components/Icons/HomeIcon";
+import CalendarIcon from "@/components/Icons/CalendarIcon";
 
 export default async function CategoryPage(props: {
   params: Promise<{ slug: string }>;
