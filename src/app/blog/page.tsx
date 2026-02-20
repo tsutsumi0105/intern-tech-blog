@@ -67,7 +67,7 @@ export default async function BlogPage({ searchParams }: Props) {
             <h1 className="text-4xl sm:text-5xl font-bold text-text-main">
               記事一覧
             </h1>
-            <p className="text-[16px] text-text-secondary">
+            <p className="text-base text-text-secondary">
               全{totalCount}件の記事
             </p>
           </div>
