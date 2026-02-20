@@ -1,17 +1,17 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-export type BreadcrumbItem = {
+export type BreadCrumbItem = {
   label: string;
   href?: string;
   icon?: ReactNode;
 };
 
 type Props = {
-  items: BreadcrumbItem[];
+  items: BreadCrumbItem[];
 };
 
-export default function Breadcrumb({ items }: Props) {
+export default function BreadCrumb({ items }: Props) {
   const separator = <span className="text-text-soft">&gt;</span>;
 
   return (

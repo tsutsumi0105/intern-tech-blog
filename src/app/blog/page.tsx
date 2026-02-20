@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HomeIcon from "@/components/icons/HomeIcon";
 import DocIcon from "@/components/icons/DocIcon";
-import Breadcrumb, { BreadcrumbItem } from "@/components/BreadCrumb";
+import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import Pagination from "@/components/Pagination";
 import type { Blog } from "@/types/microcms";
 import Calendar from "@/components/icons/Calendar";
@@ -42,7 +42,7 @@ export default async function BlogPage({ searchParams }: Props) {
 
   const blogs = data.contents;
 
-  const breadcrumbItems: BreadcrumbItem[] = [
+  const breadcrumbItems: BreadCrumbItem[] = [
     {
       label: "ホーム",
       href: "/",
@@ -55,7 +55,7 @@ export default async function BlogPage({ searchParams }: Props) {
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-12">
         {/* パンくず*/}
-        <Breadcrumb items={breadcrumbItems} />
+        <BreadCrumb items={breadcrumbItems} />
 
         {/* 見出し */}
         <div className="flex items-center gap-4">
