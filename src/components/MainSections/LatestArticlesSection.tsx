@@ -3,7 +3,7 @@ import Image from "next/image";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 import type { Blog } from "@/types/microcms";
-import Calendar from "../icons/Calendar";
+import Calendar from "../Icons/Calendar";
 
 type Props = {
   blogs: Blog[];

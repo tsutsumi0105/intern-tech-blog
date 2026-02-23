@@ -2,12 +2,12 @@ export const dynamic = "force-dynamic";
 import { client } from "@/lib/microcms";
 import Link from "next/link";
 import Image from "next/image";
-import HomeIcon from "@/components/icons/HomeIcon";
-import DocIcon from "@/components/icons/DocIcon";
+import HomeIcon from "@/components/Icons/HomeIcon";
+import DocIcon from "@/components/Icons/DocIcon";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import Pagination from "@/components/Pagination";
 import type { Blog } from "@/types/microcms";
-import Calendar from "@/components/icons/Calendar";
+import Calendar from "@/components/Icons/Calendar";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 
