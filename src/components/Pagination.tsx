@@ -94,7 +94,7 @@ export default function Pagination({
                 "w-10 h-10 sm:w-12 sm:h-12 font-normal grid place-items-center rounded-lg text-sm shadow-md hover:shadow-lg transition",
                 p === page
                   ? "bg-primary text-white"
-                  : "bg-white text-primary border-border-light",
+                  : "bg-white text-primary border border-border-light",
               ].join(" ")}
             >
               {p}
