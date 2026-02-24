@@ -32,7 +32,7 @@ export default function ArticleCard({ blogs }: Props) {
             <div className="absolute  px-3 py-1.5 top-4 right-4 inline-flex gap-1.5 border border-primary-soft  rounded-full w-fit shadow-md  bg-white/95 text-primary items-center">
               <TagIcon width={12} height={12} />
               <span className="text-xs font-semibold px-2 py-1">
-                {blog.tags[0].name}
+                {blog.tags[0]?.name}
               </span>
               {blog.tags.length > 1 && (
                 <span className="text-xs font-semibold px-2 py-1 text-primary">
