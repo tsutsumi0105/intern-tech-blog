@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ArrowIcon from "../Icons/ArrowIcon";
 
 export default function HeroSection() {
   return (
@@ -34,12 +35,7 @@ export default function HeroSection() {
           >
             <Image src="/images/book.svg" alt="本" width={20} height={20} />
             <span className="text-base font-semibold">記事を読む</span>
-            <Image
-              src="/images/blue-arrow.svg"
-              alt="矢印"
-              width={20}
-              height={20}
-            />
+            <ArrowIcon width={20} height={20} />
           </Link>
 
           <Link

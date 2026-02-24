@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Tag } from "@/types/microcms";
+import ArrowIcon from "../Icons/ArrowIcon";
 
 type Props = {
   tags: Tag[];
@@ -43,16 +44,9 @@ export default function CategoriesSection({ tags }: Props) {
 
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 
-                <div className="absolute bottom-7 left-6 flex items-center gap-2">
-                  <h3 className="font-semibold text-2xl text-white">
-                    {tag.name}
-                  </h3>
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="矢印"
-                    width={16}
-                    height={16}
-                  />
+                <div className="absolute bottom-7 left-6 flex items-center gap-2 text-white font-semibold">
+                  <h3 className="text-2xl">{tag.name}</h3>
+                  <ArrowIcon width={20} height={20} />
                 </div>
               </div>
 
@@ -60,14 +54,9 @@ export default function CategoriesSection({ tags }: Props) {
                 <p className="text-sm text-text-muted line-clamp-2">
                   {tag.description}
                 </p>
-                <div className="flex gap-2">
-                  <span className="text-sm text-primary">記事を見る</span>
-                  <Image
-                    src="/images/blue-arrow.svg"
-                    alt="矢印"
-                    width={16}
-                    height={16}
-                  />
+                <div className="flex place-items-center gap-2  text-primary">
+                  <span className="text-sm">記事を見る</span>
+                  <ArrowIcon width={16} height={16} />
                 </div>
               </div>
             </Link>
