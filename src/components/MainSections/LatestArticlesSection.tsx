@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Blog } from "@/types/microcms";
 import ArrowIcon from "../Icons/ArrowIcon";
-import ArticleCard from "../ArtucleCard";
+import ArticleCard from "../ArticleCard";
 
 type Props = {
   blogs: Blog[];

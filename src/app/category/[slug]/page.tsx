@@ -4,7 +4,7 @@ import TagIcon from "@/components/Icons/TagIcon";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import { notFound } from "next/navigation";
-import ArticleCard from "@/components/ArtucleCard";
+import ArticleCard from "@/components/ArticleCard";
 
 export default async function CategoryPage(props: {
   params: Promise<{ slug: string }>;
