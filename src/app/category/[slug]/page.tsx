@@ -8,6 +8,7 @@ import { ja } from "date-fns/locale";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import CalendarIcon from "@/components/Icons/CalendarIcon";
+import { notFound } from "next/navigation";
 
 export default async function CategoryPage(props: {
   params: Promise<{ slug: string }>;
@@ -23,6 +24,10 @@ export default async function CategoryPage(props: {
   });
 
   const tag = tagData.contents[0];
+
+  if (!tag) {
+    notFound();
+  }
 
   const data = await client.get({
     endpoint: "blogs",
