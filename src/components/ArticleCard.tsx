@@ -49,7 +49,7 @@ export default function ArticleCard({ blogs }: Props) {
                 {blog.tags.map((tag) => (
                   <span
                     key={tag.id}
-                    className="flex items-center gap-1 text-primary border border-[#DBEAFE] rounded-full px-3 py-2"
+                    className="flex items-center gap-1 text-primary border border-primary-soft rounded-full px-3 py-2"
                   >
                     <TagIcon width={14} height={14} />
                     <span className="text-sm font-semibold">{tag.name}</span>
