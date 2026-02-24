@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import DocIcon from "@/components/Icons/DocIcon";
+import ArrowIcon from "@/components/Icons/ArrowIcon";
+import TagIcon from "@/components/Icons/TagIcon";
+import Calendar from "@/components/Icons/Calendar";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import Pagination from "@/components/Pagination";
 import type { Blog } from "@/types/microcms";
-import Calendar from "@/components/Icons/Calendar";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
 
@@ -83,17 +85,12 @@ export default async function BlogPage({ searchParams }: Props) {
                   className="object-cover"
                 />
                 {/* タグ */}
-                <div className="absolute  px-3 py-1.5 top-4 right-4 inline-flex gap-1.5 border border-primary-soft  rounded-full w-fit shadow-md  bg-white/95">
-                  <Image
-                    src="/images/tag.svg"
-                    alt="タグ"
-                    width={12}
-                    height={12}
-                  />
+                <div className="absolute  px-3 py-1.5 top-4 right-4 inline-flex gap-1.5 border border-primary-soft  rounded-full w-fit shadow-md  bg-white/95  text-primary items-center">
+                  <TagIcon width={12} height={12} />
                   {blog.tags.map((tag) => (
                     <span
                       key={tag.id}
-                      className="text-xs font-semibold px-2 py-1 text-primary"
+                      className="text-xs font-semibold px-2 py-1"
                     >
                       {tag.name}
                     </span>
@@ -116,14 +113,9 @@ export default async function BlogPage({ searchParams }: Props) {
                 <p className="text-sm text-text-secondary">
                   {blog.description}
                 </p>
-                <div className="flex gap-2">
-                  <span className="text-sm text-primary">記事を読む</span>
-                  <Image
-                    src="/images/blue-arrow.svg"
-                    alt="矢印"
-                    width={16}
-                    height={16}
-                  />
+                <div className="flex gap-2  text-primary items-center">
+                  <span className="text-sm">記事を読む</span>
+                  <ArrowIcon width={16} height={16} />
                 </div>
               </div>
             </Link>
