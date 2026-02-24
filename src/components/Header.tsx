@@ -3,8 +3,8 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import HomeIcon from "./icons/HomeIcon";
-import DocIcon from "./icons/DocIcon";
+import HomeIcon from "./Icons/HomeIcon";
+import DocIcon from "./Icons/DocIcon";
 
 const navItems = [
   {
@@ -16,7 +16,7 @@ const navItems = [
   {
     label: "記事一覧",
     href: "/blog",
-    icon: <DocIcon />,
+    icon: <DocIcon width={16} height={16} />,
   },
 ];
 
