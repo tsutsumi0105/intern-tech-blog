@@ -85,19 +85,18 @@ export default function Pagination({
             );
           }
 
-          const p = item;
           return (
             <Link
-              key={p}
-              href={href(p)}
+              key={item}
+              href={href(item)}
               className={[
                 "w-10 h-10 sm:w-12 sm:h-12 font-normal grid place-items-center rounded-lg text-sm shadow-md hover:shadow-lg transition",
-                p === page
+                item === page
                   ? "bg-primary text-white"
                   : "bg-white text-primary border border-border-light",
               ].join(" ")}
             >
-              {p}
+              {item}
             </Link>
           );
         })}
