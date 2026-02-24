@@ -20,17 +20,7 @@ const PER_PAGE = 1;
 export default async function BlogPage({ searchParams }: Props) {
   const params = await searchParams;
   const requestedPage = Math.max(1, Number(params?.page ?? "1") || 1);
-  const totalData = await client.get({
-    endpoint: "blogs",
-    queries: {
-      limit: 1,
-    },
-  });
-
-  const totalCount = totalData.totalCount;
-  const totalPages = Math.max(1, Math.ceil(totalCount / PER_PAGE));
-  const page = Math.min(requestedPage, totalPages);
-  const offset = (page - 1) * PER_PAGE;
+  const offset = (requestedPage - 1) * PER_PAGE;
   const data = await client.get({
     endpoint: "blogs",
     queries: {
@@ -39,6 +29,9 @@ export default async function BlogPage({ searchParams }: Props) {
       orders: "-publishedAt",
     },
   });
+  const totalCount = data.totalCount;
+  const totalPages = Math.max(1, Math.ceil(totalCount / PER_PAGE));
+  const page = Math.min(requestedPage, totalPages);
 
   const blogs = data.contents;
 
