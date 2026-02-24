@@ -28,20 +28,6 @@ export default function ArticleCard({ blogs }: Props) {
               fill
               className="object-cover"
             />
-            {/* タグ */}
-            {blog.tags.length > 0 && (
-              <div className="absolute  px-3 py-1.5 top-4 right-4 inline-flex gap-1.5 border border-primary-soft  rounded-full w-fit shadow-md  bg-white/95 text-primary items-center">
-                <TagIcon width={12} height={12} />
-                <span className="text-xs font-semibold px-2 py-1">
-                  {blog.tags[0]?.name}
-                </span>
-                {blog.tags.length > 1 && (
-                  <span className="text-xs font-semibold px-2 py-1 text-primary">
-                    ...
-                  </span>
-                )}
-              </div>
-            )}
           </div>
           {/* 本文 */}
           <div className="flex flex-col p-6 gap-4">
@@ -57,6 +43,20 @@ export default function ArticleCard({ blogs }: Props) {
               {blog.title}
             </h3>
             <p className="text-sm text-text-secondary">{blog.description}</p>
+            {/* タグ */}
+            {blog.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5">
+                {blog.tags.map((tag) => (
+                  <span
+                    key={tag.id}
+                    className="flex items-center gap-1 text-primary border border-[#DBEAFE] rounded-full px-3 py-2"
+                  >
+                    <TagIcon width={14} height={14} />
+                    <span className="text-sm font-semibold">{tag.name}</span>
+                  </span>
+                ))}
+              </div>
+            )}
             <div className="flex gap-2 text-primary items-center">
               <span className="text-sm">記事を読む</span>
               <ArrowIcon width={16} height={16} />
