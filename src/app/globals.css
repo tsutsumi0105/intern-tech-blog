@@ -16,6 +16,8 @@
   --color-surface: #ffffff;
   --color-surface-dark: #101828;
   --color-text-soft: #d1d5dc;
+  --color-border: #e5e7eb;
+  --color-surface-muted: #f9fafb;
 }
 
 html {
