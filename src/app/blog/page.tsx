@@ -6,7 +6,7 @@ import HomeIcon from "@/components/Icons/HomeIcon";
 import DocIcon from "@/components/Icons/DocIcon";
 import ArrowIcon from "@/components/Icons/ArrowIcon";
 import TagIcon from "@/components/Icons/TagIcon";
-import Calendar from "@/components/Icons/Calendar";
+import CalendarIcon from "@/components/Icons/CalendarIcon";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import Pagination from "@/components/Pagination";
 import type { Blog } from "@/types/microcms";
@@ -100,7 +100,7 @@ export default async function BlogPage({ searchParams }: Props) {
               {/* 本文 */}
               <div className="flex flex-col p-6 gap-4">
                 <div className="flex gap-2 items-center">
-                  <Calendar width={16} height={16} />
+                  <CalendarIcon width={16} height={16} />
                   <span className="text-text-tertiary text-sm mt-auto">
                     {format(new Date(blog.publishedAt), "yyyy年M月d日", {
                       locale: ja,
