@@ -39,7 +39,10 @@ export default function Header() {
 
         <nav className="ml-auto flex items-center gap-2 sm:gap-4">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith("/blog");
             return (
               <Link
                 key={item.href}
