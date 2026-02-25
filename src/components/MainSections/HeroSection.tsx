@@ -43,7 +43,7 @@ export default function HeroSection() {
 
           <Link
             href="#categories"
-            className="flex gap-2 bg-primary-dark border border-primary-border px-8 py-4.5 rounded-full font-medium"
+            className="flex gap-2 bg-primary-dark border border-primary-border px-8 py-4.5 rounded-full font-medium items-center"
           >
             <FragmentIcon width={20} height={20} />
             <span className="text-base font-semibold">カテゴリから探す</span>
