@@ -169,7 +169,7 @@ export default async function BlogDetail({
             </div>
           </div>
         </div>
-        <div className=":hidden">
+        <div className="lg:hidden">
           <TableOfContents toc={toc} />
         </div>
       </div>
