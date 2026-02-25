@@ -40,11 +40,12 @@ export default async function BlogDetail({
       if (domNode.type !== "tag") return;
       const el = domNode as DomElement;
       const children = domToReact(el.children as unknown as DOMNode[], options);
+      const id = el.attribs?.id;
 
       switch (el.name) {
         case "h1":
           return (
-            <div className="flex items-center gap-3 scroll-mt-24">
+            <div className="flex items-center gap-3 scroll-mt-24" id={id}>
               <span className="w-2 h-10 bg-primary rounded-full" />
               <h1 className="text-4xl text-text-main font-bold">{children}</h1>
             </div>
@@ -52,7 +53,7 @@ export default async function BlogDetail({
 
         case "h2":
           return (
-            <div className="flex items-center gap-3 scroll-mt-24">
+            <div className="flex items-center gap-3 scroll-mt-24" id={id}>
               <span className="w-2 h-8 bg-primary rounded-full" />
               <h2 className="text-2xl font-semibold">{children}</h2>
             </div>
