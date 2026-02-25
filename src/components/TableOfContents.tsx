@@ -1,5 +1,5 @@
 import type { TocItem } from "@/lib/render-toc";
-import Image from "next/image";
+import TableOfContentsIcon from "./Icons/TableOfContentsIcon";
 
 export default function TableOfContents({ toc }: { toc: TocItem[] }) {
   if (!toc.length) return null;
@@ -7,12 +7,7 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
   return (
     <nav className="flex flex-col gap-6 bg-white border border-primary-soft rounded-3xl p-6 shadow-lg mx-4.25">
       <div className="flex gap-2 items-center border-b-2 border-primary-soft py-2">
-        <Image
-          src="/images/TableOfContents.svg"
-          alt="目次"
-          width={32}
-          height={32}
-        />
+        <TableOfContentsIcon width={32} height={32} />
         <p className="font-bold text-text-main text-lg">目次</p>
       </div>
       <ul className="flex flex-col gap-1">
