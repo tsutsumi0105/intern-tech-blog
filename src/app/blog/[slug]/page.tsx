@@ -160,10 +160,11 @@ export default async function BlogDetail({
             <h1 className="text-3xl sm:text-5xl font-bold mb-8">
               {blog.title}
             </h1>
-            <p className="text-lg text-text-secondary mb-12">
-              {blog.description}
-            </p>
-
+            {blog.description && (
+              <p className="text-lg text-text-secondary mb-12">
+                {blog.description}
+              </p>
+            )}
             <div className="sm:grid lg:grid-cols-[1fr_255px] sm:gap-8 sm:items-start">
               <article className="blog-content space-y-6 sm:flex-1">
                 {parse(html, options)}
