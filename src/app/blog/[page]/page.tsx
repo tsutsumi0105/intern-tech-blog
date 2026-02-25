@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import { client } from "@/lib/microcms";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import DocIcon from "@/components/Icons/DocIcon";
@@ -7,14 +6,26 @@ import Pagination from "@/components/Pagination";
 import ArticleCard from "@/components/ArticleCard";
 
 type Props = {
-  searchParams?: Promise<{ page?: string }>;
+  params: Promise<{ page: string }>;
 };
 
 const PER_PAGE = 6;
 
-export default async function BlogPage({ searchParams }: Props) {
-  const params = await searchParams;
-  const requestedPage = Math.max(1, Number(params?.page ?? "1") || 1);
+export async function generateStaticParams() {
+  const data = await client.get({
+    endpoint: "blogs",
+    queries: { limit: 1 },
+  });
+  const totalPages = Math.max(1, Math.ceil(data.totalCount / PER_PAGE));
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    page: String(i + 1),
+  }));
+}
+
+export default async function BlogPage({ params }: Props) {
+  const { page: pageParam } = await params;
+  const requestedPage = Math.max(1, Number(pageParam) || 1);
   const offset = (requestedPage - 1) * PER_PAGE;
   const data = await client.get({
     endpoint: "blogs",

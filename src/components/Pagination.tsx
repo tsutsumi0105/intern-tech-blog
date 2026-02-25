@@ -58,7 +58,7 @@ export default function Pagination({
   if (totalPages <= 1) return null;
 
   const page = Math.min(Math.max(1, currentPage), totalPages);
-  const href = (p: number) => `${basePath}?page=${p}`;
+  const href = (p: number) => `${basePath}/${p}`;
   const items = getPaginationItems(page, totalPages, 1);
 
   return (
