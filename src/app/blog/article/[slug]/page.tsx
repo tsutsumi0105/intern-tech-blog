@@ -93,7 +93,7 @@ export default async function BlogDetail({
 
   const breadcrumbItems: BreadCrumbItem[] = [
     { label: "ホーム", href: "/", icon: <HomeIcon width={16} height={16} /> },
-    { label: "記事一覧", href: "/blog/1" },
+    { label: "記事一覧", href: "/blog" },
     { label: `${blog.title}` },
   ];
 
