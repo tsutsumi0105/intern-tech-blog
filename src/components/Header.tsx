@@ -42,7 +42,8 @@ export default function Header() {
             const isActive =
               item.href === "/"
                 ? pathname === "/"
-                : pathname.startsWith("/blog");
+                : pathname.startsWith(`/${item.href.split("/")[1]}`);
+
             return (
               <Link
                 key={item.href}
