@@ -1,7 +1,7 @@
 import { client } from "@/lib/microcms";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import type { Blog } from "@/types/microcms";
+import type { Blog, Tag } from "@/types/microcms";
 import parse, { DOMNode, domToReact } from "html-react-parser";
 import { Element as DomElement } from "domhandler";
 import { renderToc } from "@/lib/render-toc";
@@ -28,6 +28,10 @@ export default async function BlogDetail({
     blog = await client.get<Blog>({
       endpoint: "blogs",
       contentId: slug,
+      queries: {
+        fields:
+          "id,title,description,content,eyecatch,tags.id,tags.name,tags.slug,publishedAt",
+      },
     });
   } catch {
     notFound();
@@ -141,15 +145,16 @@ export default async function BlogDetail({
                   })}
                 </span>
               </div>
-
-              <div className="px-4 py-2 rounded-full w-fit inline-flex place-items-center border border-primary-soft shadow-md bg-primary text-white gap-2">
-                <TagIcon width={16} height={16} />
-                {blog.tags.map((tag) => (
-                  <span key={tag.id} className="text-sm font-semibold">
-                    {tag.name}
-                  </span>
-                ))}
-              </div>
+              {blog.tags.map((tag) => (
+                <Link
+                  key={tag.id}
+                  href={`/category/${tag.slug}`}
+                  className="px-4 py-2 rounded-full w-fit inline-flex place-items-center border border-primary-soft shadow-md bg-primary text-white gap-2"
+                >
+                  <TagIcon width={16} height={16} />
+                  <span className="text-sm font-semibold">{tag.name}</span>
+                </Link>
+              ))}
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-bold mb-8">
