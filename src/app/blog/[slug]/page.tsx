@@ -46,7 +46,7 @@ export default async function BlogDetail({
           return (
             <div className="flex items-center gap-3 scroll-mt-24">
               <span className="w-2 h-10 bg-primary rounded-full" />
-              <h1 className="text-4xl text-[#101828] font-bold">{children}</h1>
+              <h1 className="text-4xl text-text-main font-bold">{children}</h1>
             </div>
           );
 
@@ -64,7 +64,7 @@ export default async function BlogDetail({
           );
 
         case "p":
-          return <p className="text-[18px] text-text-sub mb-6">{children}</p>;
+          return <p className="text-lg text-text-sub mb-6">{children}</p>;
 
         case "pre":
           return (
@@ -78,10 +78,10 @@ export default async function BlogDetail({
 
         case "strong":
         case "b":
-          return <span className="font-bold text-[#101828]">{children}</span>;
+          return <span className="font-bold text-text-main">{children}</span>;
 
         case "hr":
-          return <hr className="border-t border-[#E5E7EB] my-8" />;
+          return <hr className="border-t border-border my-8" />;
       }
     },
   };
@@ -105,7 +105,7 @@ export default async function BlogDetail({
               px-4.5 py-2.5
               rounded-full
               border shadow-lg
-              bg-white text-primary border-[#BEDBFF]
+              bg-white text-primary border-border
               transition-colors duration-200
               hover:bg-primary hover:text-white hover:border-primary
             "
@@ -132,7 +132,7 @@ export default async function BlogDetail({
 
           <div className="px-6 py-6 sm:px-8 sm:py-8">
             <div className="flex gap-4 mb-6">
-              <div className="px-4 py-2 rounded-full w-fit inline-flex gap-1.5 border border-border bg-surface-muted text-[14px] text-text-sub items-center">
+              <div className="px-4 py-2 rounded-full w-fit inline-flex gap-1.5 border border-border bg-surface-muted text-sm text-text-sub items-center">
                 <CalendarIcon width={16} height={16} />
                 <span>
                   {format(new Date(blog.publishedAt), "yyyy年M月d日", {

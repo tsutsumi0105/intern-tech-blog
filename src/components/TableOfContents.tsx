@@ -23,7 +23,7 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
               className={`
                   group relative flex items-center
                   overflow-hidden rounded-[10px] py-2 pl-3
-                  text-[14px] text-text-sub transition
+                  text-sm text-text-sub transition
                   hover:bg-primary-light hover:text-primary hover:font-bold
                 `}
             >
