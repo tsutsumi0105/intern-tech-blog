@@ -17,7 +17,7 @@ export default function ArticleCard({ blogs }: Props) {
       {blogs.map((blog: Blog) => (
         <Link
           key={blog.id}
-          href={`/blog/${blog.id}`}
+          href={`/blog/article/${blog.id}`}
           className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
         >
           {/* 画像 */}

@@ -93,7 +93,7 @@ export default async function BlogDetail({
 
   const breadcrumbItems: BreadCrumbItem[] = [
     { label: "ホーム", href: "/", icon: <HomeIcon width={16} height={16} /> },
-    { label: "記事一覧", href: "/blog" },
+    { label: "記事一覧", href: "/blog/1" },
     { label: `${blog.title}` },
   ];
 
@@ -103,7 +103,7 @@ export default async function BlogDetail({
         <div className="mx-4">
           <BreadCrumb items={breadcrumbItems} />
           <Link
-            href="/blog"
+            href="/blog/1"
             className="
               mt-4 inline-flex items-center gap-2
               text-base
