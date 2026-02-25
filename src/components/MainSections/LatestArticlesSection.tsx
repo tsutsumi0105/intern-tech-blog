@@ -24,7 +24,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
             </h2>
           </div>
           <Link
-            href="/blog"
+            href="/blog/1"
             className="hidden sm:flex ml-auto mt-auto items-center justify-center gap-2 bg-primary rounded-full w-38.5 h-12 shadow-lg place-items-center text-white font-semibold text-base"
           >
             <span>すべて見る</span>
@@ -33,7 +33,7 @@ export default function LatestArticlesSection({ blogs }: Props) {
         </div>
         <ArticleCard blogs={blogs} />
         <Link
-          href="/blog"
+          href="/blog/1"
           className="flex mx-auto justify-center items-center gap-2 bg-primary border border-primary-border px-8 py-4.5 rounded-full w-80 shadow-lg sm:hidden text-white font-semibold text-base"
         >
           <span>すべて見る</span>

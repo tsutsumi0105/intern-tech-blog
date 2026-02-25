@@ -30,7 +30,7 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <Link
-            href="/blog"
+            href="/blog/1"
             className="flex gap-2 items-center bg-white text-primary px-8 py-4.5 rounded-full  font-medium shadow-lg"
           >
             <Image src="/images/book.svg" alt="本" width={20} height={20} />

@@ -15,7 +15,7 @@ const navItems = [
 
   {
     label: "記事一覧",
-    href: "/blog",
+    href: "/blog/1",
     icon: <DocIcon width={16} height={16} />,
   },
 ];
@@ -39,7 +39,11 @@ export default function Header() {
 
         <nav className="ml-auto flex items-center gap-2 sm:gap-4">
           {navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(`/${item.href.split("/")[1]}`);
+
             return (
               <Link
                 key={item.href}
