@@ -90,6 +90,23 @@ export default async function BlogDetail({
 
         case "hr":
           return <hr className="border-t border-border my-8" />;
+
+        case "ul":
+          return (
+            <ul className="list-disc pl-6 space-y-2" id={id}>
+              {children}
+            </ul>
+          );
+
+        case "ol":
+          return (
+            <ol className="list-decimal pl-6 space-y-2" id={id}>
+              {children}
+            </ol>
+          );
+
+        case "li":
+          return <li className="text-lg text-text-sub">{children}</li>;
       }
     },
   };
