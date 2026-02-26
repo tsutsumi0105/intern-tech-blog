@@ -4,6 +4,8 @@ import CategoriesSection from "@/components/MainSections/CategoriesSection";
 import LatestArticlesSection from "@/components/MainSections/LatestArticlesSection";
 import type { Blog, Tag } from "../types/microcms";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const data = await client.get<{ contents: Blog[] }>({
     endpoint: "blogs",
