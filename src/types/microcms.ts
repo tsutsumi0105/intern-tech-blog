@@ -14,10 +14,6 @@ export type Blog = {
   description?: string;
   content: string;
   eyecatch: MicroCMSImage;
-  tags: {
-    id: string;
-    name: string;
-    slug: string;
-  }[];
+  tags: Pick<Tag, "id" | "name" | "slug">[];
   publishedAt: string;
 };
