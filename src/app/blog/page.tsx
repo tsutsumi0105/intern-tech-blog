@@ -63,7 +63,7 @@ export default async function BlogPage({ searchParams }: Props) {
         </div>
 
         {/*記事*/}
-        <ArticleCard blogs={blogs} />
+        <ArticleCard blogs={blogs} currentPage={page} />
         {/*ページネーション*/}
         <Pagination
           currentPage={page}

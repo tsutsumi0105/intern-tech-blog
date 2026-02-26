@@ -17,8 +17,10 @@ import CalendarIcon from "@/components/Icons/CalendarIcon";
 
 export default async function BlogDetail({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ from?: string }>;
 }) {
   const { slug } = await params;
 
@@ -38,6 +40,7 @@ export default async function BlogDetail({
   }
 
   const { toc, html } = renderToc(blog.content);
+  const from = Math.max(1, Number((await searchParams).from) || 1);
 
   const options = {
     replace(domNode: DOMNode) {
@@ -93,7 +96,7 @@ export default async function BlogDetail({
 
   const breadcrumbItems: BreadCrumbItem[] = [
     { label: "ホーム", href: "/", icon: <HomeIcon width={16} height={16} /> },
-    { label: "記事一覧", href: "/blog/1" },
+    { label: "記事一覧", href: `/blog?page=${from}` },
     { label: `${blog.title}` },
   ];
 
@@ -103,7 +106,7 @@ export default async function BlogDetail({
         <div className="mx-4">
           <BreadCrumb items={breadcrumbItems} />
           <Link
-            href="/blog/1"
+            href={`/blog?page=${from}`}
             className="
               mt-4 inline-flex items-center gap-2
               text-base

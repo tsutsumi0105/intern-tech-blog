@@ -9,15 +9,22 @@ import TagIcon from "./Icons/TagIcon";
 
 type Props = {
   blogs: Blog[];
+  currentPage?: number;
 };
 
-export default function ArticleCard({ blogs }: Props) {
+export default function ArticleCard({ blogs, currentPage }: Props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {blogs.map((blog: Blog) => (
         <Link
           key={blog.id}
-          href={`/blog/${blog.id}`}
+          href={{
+            pathname: `/blog/${blog.id}`,
+            query:
+              typeof currentPage === "number"
+                ? { from: String(currentPage) }
+                : {},
+          }}
           className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
         >
           {/* 画像 */}
