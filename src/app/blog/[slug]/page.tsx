@@ -139,7 +139,7 @@ export default async function BlogDetail({
           </div>
 
           <div className="px-6 py-6 sm:px-8 sm:py-8">
-            <div className="flex gap-4 mb-6">
+            <div className="flex flex-wrap gap-4 mb-6">
               <div className="px-4 py-2 rounded-full w-fit inline-flex gap-1.5 border border-border bg-surface-muted text-sm text-text-sub items-center">
                 <CalendarIcon width={16} height={16} />
                 <span>
