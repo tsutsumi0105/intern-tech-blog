@@ -15,7 +15,7 @@ const navItems = [
 
   {
     label: "記事一覧",
-    href: "/blog/1",
+    href: "/blog",
     icon: <DocIcon width={16} height={16} />,
   },
 ];
