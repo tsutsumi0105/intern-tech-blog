@@ -16,7 +16,7 @@ export default function BreadCrumb({ items }: Props) {
 
   return (
     <nav>
-      <ol className="flex items-center gap-2 text-sm text-text-muted">
+      <ol className="flex flex-wrap items-center gap-2 text-sm text-text-muted">
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
 
