@@ -1,6 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import ArrowIcon from "../Icons/ArrowIcon";
+import StarIcon from "../Icons/StarIcon";
+import BookIcon from "../Icons/BookIcon";
+import FragmentIcon from "../Icons/FragmentIcon";
+import HeroImage from "../Icons/HeroImage";
 
 export default function HeroSection() {
   return (
@@ -11,7 +14,7 @@ export default function HeroSection() {
                 bg-white/10 border border-white/20
                 rounded-full px-4 py-2"
         >
-          <Image src="/images/star.svg" alt="キラキラ" width={16} height={16} />
+          <StarIcon width={16} height={16} />
           <p className="text-white/90 text-sm">学びを共有する場所</p>
         </div>
 
@@ -30,36 +33,25 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <Link
-            href="/blog/1"
+            href="/blog"
             className="flex gap-2 items-center bg-white text-primary px-8 py-4.5 rounded-full  font-medium shadow-lg"
           >
-            <Image src="/images/book.svg" alt="本" width={20} height={20} />
+            <BookIcon width={20} height={20} />
             <span className="text-base font-semibold">記事を読む</span>
             <ArrowIcon width={20} height={20} />
           </Link>
 
           <Link
             href="#categories"
-            className="flex gap-2 bg-primary-dark border border-primary-border px-8 py-4.5 rounded-full font-medium"
+            className="flex gap-2 bg-primary-dark border border-primary-border px-8 py-4.5 rounded-full font-medium items-center"
           >
-            <Image
-              src="/images/fragment.svg"
-              alt="フラグメント"
-              width={20}
-              height={20}
-            />
+            <FragmentIcon width={20} height={20} />
             <span className="text-base font-semibold">カテゴリから探す</span>
           </Link>
         </div>
       </div>
       <div className="relative h-16 sm:h-24 w-full bg-primary overflow-hidden">
-        <Image
-          src="/images/hero.svg"
-          alt="ヒーロー画像"
-          fill
-          className="object-cover"
-          priority
-        />
+        <HeroImage className="object-cover" />
       </div>
     </section>
   );

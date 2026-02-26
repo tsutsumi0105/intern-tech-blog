@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ErrorIcon from "@/components/Icons/ErrorIcon";
 
 export default function Error({
   reset,
@@ -9,12 +9,7 @@ export default function Error({
 }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-6">
-      <Image
-        src="/images/error.svg"
-        alt="エラーアイコン"
-        width={60}
-        height={60}
-      />
+      <ErrorIcon width={60} height={60} />
       <h2 className="text-3xl text-primary">予期せぬエラーが発生しました</h2>
       <button
         onClick={reset}
