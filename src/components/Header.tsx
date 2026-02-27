@@ -24,7 +24,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-surface/80 border-b border-border-light flex items-center px-4 py-3 drop-shadow sm:px-28 sm:py-5">
+    <header className="sticky top-0 z-50 bg-surface/90 border-b border-border-light flex items-center px-4 py-3 drop-shadow sm:px-28 sm:py-5">
       <div className="flex items-center w-full">
         <Link href="/" className="flex items-center gap-3">
           <Logo width={48} height={48} className="drop-shadow-md" />
