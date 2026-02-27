@@ -9,6 +9,8 @@ const inter = Inter({
   display: "swap",
 });
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://intern-tech-blog.vercel.app"),
   title: "intern-tech-blog",
