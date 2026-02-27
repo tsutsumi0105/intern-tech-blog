@@ -119,7 +119,7 @@ export default async function BlogDetail({
 
   return (
     <div className="flex flex-col">
-      <div className="max-w-6xl mx-auto bg-surface-muted flex flex-col gap-4 mb-25 pb-8 mt-12">
+      <div className="w-full max-w-6xl mx-auto bg-surface-muted flex flex-col gap-4 mb-25 pb-8 mt-12">
         <div className="mx-4">
           <BreadCrumb items={breadcrumbItems} />
           <Link
