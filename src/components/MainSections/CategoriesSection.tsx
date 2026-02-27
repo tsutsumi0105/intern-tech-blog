@@ -12,7 +12,7 @@ export default function CategoriesSection({ tags }: Props) {
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-12">
         <div className="flex flex-col items-center gap-4 w-fit mx-auto">
-          <div className="flex items-center gap-2  self-start">
+          <div className="flex items-center gap-2">
             <div className="w-8 h-0.5 bg-primary-border"></div>
             <p className="text-primary text-sm font-semibold">CATEGORIES</p>
             <div className="w-8 h-0.5 bg-primary-border"></div>
