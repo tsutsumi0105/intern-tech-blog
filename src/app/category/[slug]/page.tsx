@@ -5,6 +5,71 @@ import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import { notFound } from "next/navigation";
 import ArticleCard from "@/components/ArticleCard";
+import type { Metadata } from "next";
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  try {
+    const tagData = await client.get({
+      endpoint: "tag",
+      queries: {
+        filters: `slug[equals]${slug}`,
+        limit: 1,
+      },
+    });
+
+    const tag = tagData.contents?.[0];
+
+    if (!tag) {
+      const title = "カテゴリが見つかりません";
+      const description = "指定されたカテゴリは見つかりませんでした。";
+
+      return {
+        title,
+        description,
+        openGraph: {
+          type: "website",
+          title,
+          description,
+          url: `/category/${slug}`,
+          images: [{ url: "/thumbnail.png", width: 1200, height: 630 }],
+        },
+      };
+    }
+
+    const title = `${tag.name} | カテゴリ`;
+    const description =
+      tag.description ?? `${tag.name} に関する記事一覧ページです。`;
+    const ogImage = tag.thumbnail?.url ?? "/thumbnail.png";
+
+    return {
+      title,
+      description,
+      openGraph: {
+        type: "website",
+        title,
+        description,
+        url: `/category/${slug}`,
+        images: [{ url: ogImage, width: 1200, height: 630, alt: tag.name }],
+      },
+    };
+  } catch {
+    return {
+      title: "カテゴリ",
+      description: "カテゴリの記事一覧ページです",
+      openGraph: {
+        type: "website",
+        title: "カテゴリ",
+        description: "カテゴリの記事一覧ページです",
+        url: `/category/${slug}`,
+        images: [{ url: "/thumbnail.png" }],
+      },
+    };
+  }
+}
 
 export default async function CategoryPage(props: {
   params: Promise<{ slug: string }>;

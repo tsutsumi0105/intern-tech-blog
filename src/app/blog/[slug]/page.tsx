@@ -14,6 +14,51 @@ import ArrowIcon from "@/components/Icons/ArrowIcon";
 import TagIcon from "@/components/Icons/TagIcon";
 import HomeIcon from "@/components/Icons/HomeIcon";
 import CalendarIcon from "@/components/Icons/CalendarIcon";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  try {
+    const blog = await client.get<Blog>({
+      endpoint: "blogs",
+      contentId: slug,
+      queries: { fields: "id,title,description,eyecatch" },
+    });
+
+    const title = blog.title;
+    const description = blog.description ?? "記事詳細ページ";
+    const ogImage = blog.eyecatch?.url ?? "/thumbnail.png";
+
+    return {
+      title,
+      description,
+      openGraph: {
+        type: "article",
+        title,
+        description,
+        url: `/blog/${slug}`,
+        images: [{ url: ogImage, width: 1200, height: 630 }],
+      },
+    };
+  } catch {
+    return {
+      title: "記事が見つかりません",
+      description: "指定された記事は見つかりませんでした。",
+      openGraph: {
+        type: "article",
+        title: "記事が見つかりません",
+        description: "指定された記事は見つかりませんでした。",
+        url: `/blog/${slug}`,
+        images: [{ url: "/thumbnail.png" }],
+      },
+    };
+  }
+}
 
 export default async function BlogDetail({
   params,
