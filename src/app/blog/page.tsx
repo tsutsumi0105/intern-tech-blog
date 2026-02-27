@@ -4,6 +4,7 @@ import DocIcon from "@/components/Icons/DocIcon";
 import BreadCrumb, { BreadCrumbItem } from "@/components/BreadCrumb";
 import Pagination from "@/components/Pagination";
 import ArticleCard from "@/components/ArticleCard";
+import type { Metadata } from "next";
 
 type Props = {
   searchParams: Promise<{ page?: string }>;
@@ -12,6 +13,18 @@ type Props = {
 const PER_PAGE = 6;
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: "記事一覧",
+  description: "最新の記事一覧ページです。",
+  openGraph: {
+    type: "website",
+    title: "記事一覧",
+    description: "最新の記事一覧です。",
+    url: "/blog",
+    images: [{ url: "/thumbnail.png" }],
+  },
+};
 
 export default async function BlogPage({ searchParams }: Props) {
   const { page: pageParam } = await searchParams;
